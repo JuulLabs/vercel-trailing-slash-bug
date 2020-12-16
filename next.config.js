@@ -24,10 +24,6 @@ for (const store in stores) {
   if (locales.length === 1) {
     rewrites.push(...[
       {
-        destination: `/${store}/${locales[0]}/home`,
-        source: `/${store}`,
-      },
-      {
         destination: `/${store}/${locales[0]}/:path*`,
         source: `/${store}/:path*`,
       },

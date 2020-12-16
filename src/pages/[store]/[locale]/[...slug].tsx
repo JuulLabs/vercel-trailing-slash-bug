@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 
 type Props = {
-  params: any
+  slug: any
 }
 
-const MarketingPage: FC<Props> = ({ params }) => (
-  <div>Marketing page: {params.slug[0]}</div>
+const MarketingPage: FC<Props> = ({ slug }) => (
+  <div>Marketing page: {slug}</div>
 )
 
 const route = {
@@ -21,6 +21,13 @@ export const getStaticPaths = async () => ({
   fallback: false
 })
 
-export const getStaticProps = async ({ params }) => ({ props: { params } })
+export const getStaticProps = async ({ params: { locale, slug } }) => {
+  const slugString = slug.join('/')
+
+  return { props: {
+    locale,
+    slugString,
+   } }
+}
 
 export default MarketingPage
