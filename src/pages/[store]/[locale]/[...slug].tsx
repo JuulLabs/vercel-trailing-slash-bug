@@ -4,8 +4,8 @@ type Props = {
   slug: any
 }
 
-const MarketingPage: FC<Props> = ({ slug }) => (
-  <div>Marketing page: {slug}</div>
+const MarketingPage: FC<Props> = ({ slugString }) => (
+  <div>Marketing page: {slugString}</div>
 )
 
 const route = {
