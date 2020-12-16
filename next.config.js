@@ -14,8 +14,8 @@ for (const store in stores) {
   // Homepage
   for (const locale of locales) {
     rewrites.push({
-      destination: `/${store}/${locale}/home/`,
-      source: `/${store}/${locale}/`,
+      destination: `/${store}/${locale}/home`,
+      source: `/${store}/${locale}`,
     })
   }
 
@@ -24,12 +24,12 @@ for (const store in stores) {
   if (locales.length === 1) {
     rewrites.push(...[
       {
-        destination: `/${store}/${locales[0]}/home/`,
-        source: `/${store}/`,
+        destination: `/${store}/${locales[0]}/home`,
+        source: `/${store}`,
       },
       {
         destination: `/${store}/${locales[0]}/:path*`,
-        source: `/${store}/:path*/`,
+        source: `/${store}/:path*`,
       },
     ])
   }
@@ -37,5 +37,4 @@ for (const store in stores) {
 
 module.exports = {
   rewrites: async () => rewrites,
-  trailingSlash: true,
 }
