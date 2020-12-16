@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 type Props = {
-  slug: any
+  slugString: any
 }
 
 const MarketingPage: FC<Props> = ({ slugString }) => (
