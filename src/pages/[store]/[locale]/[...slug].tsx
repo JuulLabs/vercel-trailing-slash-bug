@@ -27,7 +27,9 @@ export const getStaticProps = async ({ params: { locale, slug } }) => {
   return { props: {
     locale,
     slugString,
-   } }
+  },
+  revalidate: 600
+ }
 }
 
 export default MarketingPage
