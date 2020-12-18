@@ -6,8 +6,7 @@ type Props = {
 }
 
 const MarketingPage: FC<Props> = ({ locale, slug }) => (
-  <div>Locale page: {locale}</div>
-  <div>Marketing page: {slug}</div>
+  <div>data: Locale => '{locale}' Slug => '{slug}'</div>
 )
 
 const route = {
