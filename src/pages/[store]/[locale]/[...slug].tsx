@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 
 type Props = {
-  slugString: any
+  slug: any
 }
 
-const MarketingPage: FC<Props> = ({ slugString }) => (
-  <div>Marketing page: {slugString}</div>
+const MarketingPage: FC<Props> = ({ slug }) => (
+  <div>Marketing page: {slug}</div>
 )
 
 const route = {

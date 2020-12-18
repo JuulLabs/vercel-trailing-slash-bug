@@ -17,7 +17,7 @@ for (const store in stores) {
     rewrites.push(...[
       {
         destination: `/${store}/${locales[0]}/:path*`,
-        source: `/${store}/:path((?![a-z]{2}-[A-Z]{2}/)*)`,
+        source: `/${store}/:path((?![a-z]{2}-[A-Z]{2}/).*)`,
       },
     ])
   //}
