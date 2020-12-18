@@ -21,14 +21,15 @@ export const getStaticPaths = async () => ({
   fallback: false
 })
 
-export const getStaticProps = async ({ params: { locale, slug } }) => {
-  const slugString = slug.join('/')
+export const getStaticProps = async ({ params }) => {
+  console.log('params', params)
+  const { locale, slug } = params
 
   return { props: {
     locale,
-    slugString,
+    slug,
   },
-  revalidate: 600
+  revalidate: 1
  }
 }
 
