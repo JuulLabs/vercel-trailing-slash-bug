@@ -1,10 +1,12 @@
 import React, { FC } from 'react'
 
 type Props = {
+  locale: any
   slug: any
 }
 
-const MarketingPage: FC<Props> = ({ slug }) => (
+const MarketingPage: FC<Props> = ({ locale, slug }) => (
+  <div>Locale page: {locale}</div>
   <div>Marketing page: {slug}</div>
 )
 
